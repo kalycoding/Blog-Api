@@ -27,7 +27,7 @@ SECRET_KEY = 'b938j21ao=$@dnq8qcd%2h7d*unz#qtt0kfn5%h9*kv$x=4)d7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -131,19 +131,27 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),] # new
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # new
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
 
 
 # Rest Framework Setup
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+       
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [ # new
         #'rest_framework.authentication.SessionAuthentication',
         #'rest_framework.authentication.BasicAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication'
     ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
 # JWT Setup
@@ -178,3 +186,9 @@ SIMPLE_JWT = {
 
 SITE_ID = 1
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #
+
+
+#Django ALLAUTH CONFIG
+# ACCOUNT_AUTHENTICATION_METHOD = "email"
+# ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_USERNAME_REQUIRED = False
