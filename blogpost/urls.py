@@ -25,5 +25,5 @@ urlpatterns = [
     path('api/v1/', include('books.urls')),
     path('api/v1/account/', include('users.urls')),
     path('schema/', schema_view), #
-    path('docs/', include_docs_urls(title='Blog API', description='A Web API for creating and editing blog posts.'))
+    path('', include_docs_urls(title='Blog API', description='A Web API for creating and editing blog posts.'))
 ]
