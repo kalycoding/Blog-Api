@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Book
+from .models import Post
 from django.contrib.auth import get_user_model
 # Create your tests here.
 
@@ -14,15 +14,15 @@ class TestBook(TestCase):
 
         self.user = get_user_model().objects.get(id=1)
 
-        Book.objects.create(
+        Post.objects.create(
             author=self.user,
             title='Python',
             body = "I'm learning Python",
         )
 
-        self.book = Book.objects.get(id=1)
+        self.post = Post.objects.get(id=1)
 
     def test_book(self):
-        self.assertEqual(self.book.author, self.user)
-        self.assertEqual(f'{self.book.title}', 'Python')
-        self.assertEqual(f'{self.book.body}', "I'm learning Python")
+        self.assertEqual(self.post.author, self.user)
+        self.assertEqual(f'{self.post.title}', 'Python')
+        self.assertEqual(f'{self.post.body}', "I'm learning Python")
