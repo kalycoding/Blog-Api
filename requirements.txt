@@ -40,4 +40,5 @@ sqlparse==0.4.1
 uritemplate==3.0.1
 urllib3==1.26.3
 usaddress==0.5.10
+whitenoise==5.2.0
 zipp==3.4.0
