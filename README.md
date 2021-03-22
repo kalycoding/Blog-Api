@@ -1,24 +1,17 @@
-# Book Store App using Django     
+# Blog API using django and django rest framework 
 
 
 
-This project was done in order to deepen my web development skills.
+This project was done in order to deepen my rest-api skills.
 
-Also understand django auth system, permissions, authorization and roles
-
+Also understand how rest framework works, handling json data
 <h4>Part 1:</h4>
 <ol>
-    <li>Create a web-app where a user can login.</li>
-    <li>User can upload files.</li>
-    <li>User can view his/her uploaded files.</li>
+    <li>Create a Blog API where a user can post a blog.</li>
+    <li>Used django rest framework to serialize the model into Json</li>
+    
 </ol>
 
-<h4>Part 2:</h4>
-<ol>
-     <li>User can search and view profile of other users.</li>
-     <li>They can share their uploaded files with any of those users.</li>
-     <li>Users can see the shared files by other users also in uploaded files.</li>
-</ol>
 
 <h4>Additional Features:</h4>
 <ol>
@@ -27,24 +20,18 @@ Also understand django auth system, permissions, authorization and roles
     <li>The user can upload any type of files such as images, videos, text files and also different types of programs like python code, java code, etc.</li>
 </ol>
     
-<h2>Technologies Used:</h2>
-<ul>
-    <li>Python</li>
-    <li>Django</li>
-    <li>Bootstrap</li>
-    <li>JavaScript</li>
-</ul>
+
     
 <h2>Additional Python Modules Required:</h2>
 <ul>
     <li>Django</li>
-    <li>django-crispy-forms</li>
-    <li>django-allauth</li>
+    <li>django-rest-framework</li>
+    <li>django-rest-auth</li>
+    <li>django jwt library</li>
+    
 </ul>
   
-<h2>Note :</h2>
 
-<b>The Secret_Key required for the execution and debugging of project is not removed from the project code. So you can use the project as your college mini-project or by using the project code you can build your own project.</b>
 
 <h2>Usage :</h2>
 
