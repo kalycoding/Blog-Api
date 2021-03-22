@@ -13,12 +13,7 @@ Also understand how rest framework works, handling json data
 </ol>
 
 
-<h4>Additional Features:</h4>
-<ol>
-    <li>In users profile user can set his/her profile picture.</li>
-    <li>Users can download other users uploaded files.</li>
-    <li>The user can upload any type of files such as images, videos, text files and also different types of programs like python code, java code, etc.</li>
-</ol>
+
     
 
     
@@ -35,6 +30,8 @@ Also understand how rest framework works, handling json data
 
 <h2>Usage :</h2>
 
+    pip install -r requirments.txt
+    
     python django_web_app/manage.py makemigrations
 
     python django_web_app/manage.py migrate
