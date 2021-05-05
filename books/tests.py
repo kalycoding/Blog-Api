@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Post
 from django.contrib.auth import get_user_model
+from rest_framework import test
 # Create your tests here.
 
 
@@ -26,3 +27,7 @@ class TestBook(TestCase):
         self.assertEqual(self.post.author, self.user)
         self.assertEqual(f'{self.post.title}', 'Python')
         self.assertEqual(f'{self.post.body}', "I'm learning Python")
+
+class TestEndPoints(TestCase):
+    def test_get_books_endpoints(self):
+        pass

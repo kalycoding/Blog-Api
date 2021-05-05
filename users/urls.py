@@ -1,5 +1,6 @@
 from django.urls import path, include, re_path
-from rest_auth.views import PasswordResetConfirmView
+#from rest_auth.views import PasswordResetConfirmView
+from django.contrib.auth.views import PasswordResetConfirmView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
