@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.schemas import get_schema_view # new
 from rest_framework.documentation import include_docs_urls # new
-
+from graphene_django.views import GraphQLView
+from books.schema import schema
 schema_view = get_schema_view(title='Blog API') 
 
 urlpatterns = [
@@ -25,5 +26,6 @@ urlpatterns = [
     path('api/v1/', include('books.urls')),
     path('api/v1/account/', include('users.urls')),
     path('schema/', schema_view), #
+    path('graphql/', GraphQLView.as_view(graphiql=True,schema=schema)),
     path('', include_docs_urls(title='Blog API', description='A Web API for creating and editing blog posts.'))
 ]

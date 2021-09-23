@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.account', # new
     'allauth.socialaccount', # new
     'rest_auth.registration', #
+    "graphene_django"
     
 ]
 
