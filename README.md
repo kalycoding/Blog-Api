@@ -1,14 +1,15 @@
-# Blog API using django and django rest framework 
+# Blog API using django and django rest framework and graphql
 
 
 
-This project was done in order to deepen my rest-api skills.
+This project was done in order to deepen my rest-api and graphql skills.
 
 Also understand how rest framework works, handling json data
 <h4>Part 1:</h4>
 <ol>
     <li>Create a Blog API where a user can post a blog.</li>
     <li>Used django rest framework to serialize the model into Json</li>
+     <li>Used graphene djangopackage to to add support for graphql</li>
     
 </ol>
 
@@ -23,6 +24,7 @@ Also understand how rest framework works, handling json data
     <li>django-rest-framework</li>
     <li>django-rest-auth</li>
     <li>django jwt library</li>
+    <li>graphene-django</li>
     
 </ul>
   
